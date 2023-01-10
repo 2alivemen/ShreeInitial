@@ -14,7 +14,7 @@ const Notes = (props) => {
   const handleClick = (e)=>{
     e.preventDefault();
     console.log("Saved Your Changes", note)
-    if((note.enumber3.length == 10 ) && (note.enumber3.charAt(0) == (6||7||8||9)) )
+    if((note.enumber3.length == 10 ) &&  ((note.enumber3.charAt(0) == 6) || (note.enumber3.charAt(0) == 7) || (note.enumber3.charAt(0) == 8) || (note.enumber3.charAt(0) == 9) ) )
     {  setlen(":")
        editNote(note.id, note.etitle, note.edescription, note.etag, note.enumber3)
     refClose.current.click()

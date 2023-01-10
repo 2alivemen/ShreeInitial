@@ -13,7 +13,7 @@ const Signup = (props) => {
     const [redd, setredd] = useState(null)
     const handleSubmit = async (e)=>{
         e.preventDefault()
-        if((first.number1.charAt(0) === (6||7||8||9) ) && (first.number1.length == 10 )){
+        if( ((first.number1.charAt(0) == 6) || (first.number1.charAt(0) == 7) || (first.number1.charAt(0) == 8) || (first.number1.charAt(0) == 9) ) && (first.number1.length == 10 )){
         const response= await fetch("http://localhost:5001/api/auth/createuser",
         {
           method:'POST',
