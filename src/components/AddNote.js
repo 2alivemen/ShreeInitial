@@ -11,8 +11,8 @@ const AddNote = (props) => {
     const [len, setlen] = useState(":")
     const [redd, setredd] = useState(null)
     const handleClick = (e)=>{
-        e.preventDefault();
-        if(note.number3.charAt(0) == (6||7||8||9))
+        e.preventDefault()
+        if((note.number3.charAt(0) == 6) || (note.number3.charAt(0) == 7) || (note.number3.charAt(0) == 8) || (note.number3.charAt(0) == 9) && (note.number3.length == 10) )
        { 
         setredd({
           color:'black'
@@ -35,7 +35,8 @@ const AddNote = (props) => {
   return (
     
     <div className='px-4'>
-        <h2>Add an Equipment</h2><form>
+
+        <h2>Add an Equipment</h2><form onSubmit={handleClick}>
     <div className="mb-3">
       <label htmlfor="title" className="form-label" >Your Title</label>
       <input type="text" className="form-control" name='title' id="title" aria-describedby="emailHelp" onChange={onChange} required/>
@@ -50,18 +51,19 @@ const AddNote = (props) => {
       <label className="form-check-label" htmlfor="exampleCheck1">Check me out</label>
     </div> */}
        <span style={redd}>Mobile Number {len}</span>  <br/>
-         <input type="number" className="form-control" name='number3' id="number3" onChange={onChange} required pattern='[6||7||8||9]+' minLength={10}/><br/>
+         <input type="number" className="form-control" name='number3' id="number3" onChange={onChange} required /><br/>
        <div className="mb-3">
       <label htmlfor="tag" className="form-label">tag</label>
       {/* <input type="text" className="form-control" name='tag' id="tag" onChange={onChange} required/> */}
       <select name="tag" id="tag" onChange={onChange} required >
+      <option value="" onChange={onChange} >Select Type</option>
           <option value="Jcb" onChange={onChange} >Jcb</option>
 
           <option value="Tractor" onChange={onChange}>Tractor</option>
           <option value="Tiller" onChange={onChange} >Tiller</option>
         </select>
     </div>
-    <button disabled={note.title.length<5 || note.description.length<5 || note.number3.length<10 || note.number3.length>10 || note.tag.length < 1} type="submit" className="btn btn-primary" onClick={handleClick}>Serisi</button>
+    <button disabled={note.title.length<5 || note.description.length<5 || note.number3.length<10 || note.number3.length>10 || note.tag.length < 1} type="submit" className="btn btn-primary" >Serisi</button>
   </form></div>
   )
 }

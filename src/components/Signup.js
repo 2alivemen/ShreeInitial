@@ -2,18 +2,18 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import jwt_decode from "jwt-decode";
-
+// && (credentials.number1?.length == 10 )
 
 
 const Signup = (props) => {
-    const [credentials, setcredentials] = useState({name:"", email:"", number1: ""})
+    // const [credentials, setcredentials] = useState({name:"", email:"", number1:""})
+    const [first, setfirst] = useState({name:"", email:"", number1:0})
     let navigate=useNavigate()
     const [len, setlen] = useState(":")
     const [redd, setredd] = useState(null)
     const handleSubmit = async (e)=>{
         e.preventDefault()
-        if((credentials.number1?.charAt(0) == (6||7||8||9)) && (credentials.number1?.length == 10 )){
-
+        if((first.number1.charAt(0) === (6||7||8||9) ) && (first.number1.length == 10 )){
         const response= await fetch("http://localhost:5001/api/auth/createuser",
         {
           method:'POST',
@@ -24,7 +24,7 @@ const Signup = (props) => {
             // "auth-token":localStorage.getItem('token')
   
           },
-          body: JSON.stringify({name:credentials.name, email:credentials.email, number1:credentials.number1})
+          body: JSON.stringify({name:first.name, email:first.email, number1:first.number1})
         })
         const json = await response.json()
         console.log(json)
@@ -32,7 +32,7 @@ const Signup = (props) => {
             //redirecting
             localStorage.setItem('token', json.authtoken)
             navigate("/")
-            props.showAlert("Successfully logged In","success")
+            props.showAlert("Successfully Registered as user 1","success")
 
             
         }
@@ -52,7 +52,7 @@ const Signup = (props) => {
 
     const onChange = (e)=>{
         // Illi mooru dot ... hesru spread operator andre note allira value + munde koda value
-        setcredentials({...credentials, [e.target.name]: e.target.value})
+        setfirst({...first, [e.target.name]: e.target.value})
     }
 
         // google login
@@ -60,7 +60,7 @@ const Signup = (props) => {
           console.log("Anna JWT Token" + response.credential);
           const User = jwt_decode(response.credential)
           console.log(User)
-          setcredentials({email:User.email, name:User.name})
+          setfirst({email:User.email, name:User.name})
     
     
     
@@ -86,11 +86,11 @@ const Signup = (props) => {
         {/* value={credentials.email} onChange={onChange} */}
         <form onSubmit={handleSubmit} >
        NAme: <input type="text"  className="form-control" placeholder="NAme"  name='name' onChange={onChange} pattern="[A-Za-z]+" title='Only Letters Are Allowed' /> <br/>
-       Email <input type="email" className="form-control"  placeholder="Email" name='email' onChange={onChange} value={credentials.email} readOnly /> <br/>
+       Email <input type="email" className="form-control"  placeholder="Email" name='email' onChange={onChange} value={first.email}  /> <br/>
        {/* Password <input type="password"  className="form-control"  placeholder="Password" name='password' minLength={5} onChange={onChange}/> <br/>
        Confirm Password <input type="password"  className="form-control" name='cpassword'  placeholder="Confirm Password" minLength={5} onChange={onChange}/> <br/> */}
-      <span style={redd}> Number:{len} <input type="number" name="number1"></input></span> <br/>
-       <button disabled={credentials.email.length<1 } type="submit" className="btn btn-primary btn-block mb-4 my-2" >Signup</button>
+      <span style={redd}> Number:{len} <input type="number" name="number1" onChange={onChange} required></input></span> <br/>
+       <button disabled={first.email.length<1 } type="submit" className="btn btn-primary btn-block mb-4 my-2" >Signup</button>
 
        
        </form>
