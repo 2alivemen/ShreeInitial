@@ -106,7 +106,7 @@ const AllEq = () => {
 
 <div className='row my-3'>
 { 
-     (notes2.length==0)? <div>No Equipment</div>:
+     (notes2?.length==0)? <div>No Equipment</div>:
         notes2.map((note) => {
         return <NoteItem2 key={note._id} note={note} updateOrder={updateOrder} />
       })

@@ -236,9 +236,12 @@ const NoteState = (props) =>{
                   // }
                   // setNote2(json)
                   // getnotes()
+               allnotes("All")
+              
                   //my method
-                 const c=  await getnotes();
-                 setNote2(c)
+                //  const c=  await getnotes();
+                //  setNote2(json)
+
 
         }
 
