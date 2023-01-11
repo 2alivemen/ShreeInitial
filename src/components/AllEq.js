@@ -12,6 +12,7 @@ const AllEq = () => {
     const { notes2, getnotes, editNote,allnotes,setnotes2, editorder } = context;
     const [tag2, settag2] = useState("All")
     const ref = useRef(null);
+    const refClose = useRef(null);
     const [inputt, setinputt] = useState({order: ""})
 
     const [order, setorder] = useState({id:"", order: ""})
@@ -47,6 +48,7 @@ const AllEq = () => {
         // setinputt(document.getElementsByName("order").value)
         // console.log(document.getElementsByName("order").value)
         editorder(order.id,order.order)
+        refClose.current.click()
 
 
       }
@@ -97,7 +99,7 @@ const AllEq = () => {
          </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button ref={refClose} type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>

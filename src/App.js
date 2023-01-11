@@ -71,7 +71,7 @@ function App() {
     <HOGU exact path="/login2" element={<><Login2 showAlert={showAlert}/></>}/>
 
     <HOGU exact path="/signup" element={<><Signup showAlert={showAlert}/></>}/>
-    <HOGU exact path="/notes2" element={<Notes2/>}/>
+    <HOGU exact path="/notes2" element={<Notes2 showAlert={showAlert}/>}/>
 
     <HOGU exact path="/alln" element={<><AllEq/></>}/>
 
