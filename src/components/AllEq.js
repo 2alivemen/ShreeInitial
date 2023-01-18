@@ -69,7 +69,7 @@ const AllEq = () => {
         const response = await fetch(`http://localhost:5001/api/notes/updatenote1234/${id}`, {
           method: 'PUT',
           headers: {
-            "auth-token":sessionStorage.getItem('token'),
+            "auth-token":sessionStorage.getItem('token2'),
             // "auth-token": sessionStorage.getItem('token'),
             'Content-Type': 'application/json'
           },
