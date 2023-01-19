@@ -15,6 +15,12 @@ import {
 
 const Login = (props) => {
     // const {test, settest, useremail, setuseremail} = useContext(noteContext)
+
+    const mystyle ={
+      color:"#ccc",
+      fontSize:"10px",
+       textAlign:"right",
+        width:"230px"}
     const context = useContext(noteContext)
     const {test, settest, block, setblock } = context;
 
@@ -146,6 +152,8 @@ const Login = (props) => {
 <div className="App">
       <div id="signInDiv"></div>
     </div>
+    {/* <div style={mystyle}>powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style={{color:"#ccc"}}>Surfing Waves</a></div>  */}
+    
 
 
     </div>

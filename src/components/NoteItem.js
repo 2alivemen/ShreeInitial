@@ -113,7 +113,7 @@ const Noteitem = (props) => {
      
 
 
-         <div className='card col-md-5 mx-3 my-3'>
+         <div className='card col-md-5 mx-3 my-3 '>
  
   <div className="cd-grid-1fr">
     <h5 className="card-title">  {note.title} 
