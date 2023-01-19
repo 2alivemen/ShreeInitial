@@ -14,7 +14,7 @@ const Signup2 = (props) => {
     const handleSubmit = async (e)=>{
         e.preventDefault()
         if( ((first.number2.charAt(0) == 6) || (first.number2.charAt(0) == 7) || (first.number2.charAt(0) == 8) || (first.number2.charAt(0) == 9) ) && (first.number2.length == 10 )){
-        const response= await fetch("http://localhost:5001/api/auth/createuser",
+        const response= await fetch("http://localhost:5001/api/auth/createuser2",
         {
           method:'POST',
           headers:{
