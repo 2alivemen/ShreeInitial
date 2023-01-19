@@ -41,21 +41,19 @@ const Navbar = () => {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse tw-items-center tw-flex tw-justify-between" id="navbarSupportedContent">
-      <ul className="navbar-nav tw-space-x-2 tw-space-y-2 mb-lg-0 tw-mx-4">
-        <li className="nav-item">
-         {(sessionStorage.getItem('token'))&& <KONDI className={`nav-link ${(location.pathname === "/")?"active bg-danger":'bg-success'}`} aria-current="page" to="/">Home</KONDI>}
+      <ul className="navbar-nav tw-space-x-4 tw-space-y-2 mb-lg-0 tw-mx-4">
+        <li className="nav-item navlogo">
+         {(sessionStorage.getItem('token'))&& <KONDI className={` ${(location.pathname === "/")?"tw-text-slate-300 tw-text-2xl":'tw-text-pink-700'}`} aria-current="page" to="/">Home</KONDI>}
 
-
-<li className="nav-item">
-         {( sessionStorage.getItem('token2')) && <KONDI className={`nav-link ${(location.pathname === "/notes2")?"active bg-danger":'bg-success'}`} aria-current="page" to="/notes2">YourHome</KONDI>}
         </li>
-
+        <li className="nav-item navlogo">
+         {( sessionStorage.getItem('token2')) && <KONDI className={` ${(location.pathname === "/notes2")?"tw-text-slate-300 tw-text-2xl":'tw-text-pink-700'}`} aria-current="page" to="/notes2">YourHome</KONDI>}
         </li>
         <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 ">
           <KONDI className={`${(location.pathname === "/about")?"tw-text-slate-300 tw-text-2xl":'tw-text-pink-700'} `} to="/about">AboutUs</KONDI>
         </li>
-        <li className="nav-item">
-         {(sessionStorage.getItem('token2')) && <KONDI className={`nav-link ${(location.pathname === "/alln")?"active bg-danger":'bg-success'}`} aria-current="page" to="/alln">All Equipment</KONDI>}
+        <li className="nav-item navlogo">
+         {(sessionStorage.getItem('token2')) && <KONDI className={` ${(location.pathname === "/alln")?"tw-text-slate-300 tw-text-2xl":'tw-text-pink-700'}`} aria-current="page" to="/alln">All Equipment</KONDI>}
         </li>
         <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 tw-my-2">
          <KONDI className={` ${(location.pathname === "/news")?" tw-text-zinc-400 tw-text-2xl ":' tw-text-pink-600 '}`} aria-current="page" to="/news">News English</KONDI>
