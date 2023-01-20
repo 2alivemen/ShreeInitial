@@ -19,10 +19,10 @@ const NoteItem2 = (props) => {
     
   return (
     <>
-    <div>
+   
     
         
-        <div className="card col-md-5 mx-3 my-3" >
+        <div className="card col-md-5  my-3 tw-mx-auto  cardguru" >
   <img src={(note.tag == "Tractor")?img:((note.tag == "Jcb") && img2)} width="200" className="" alt="tamma"/>
   <div className="card-body">
     <p>deva</p>
@@ -35,7 +35,7 @@ const NoteItem2 = (props) => {
   </div>
   {/* {console.log(img2)} */}
 </div>
-    </div>
+   
     </>
   )
 }

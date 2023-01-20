@@ -99,7 +99,7 @@ const AllEq = () => {
     }
 
   return (
-    <div>
+    <div className='tw-text-center tw-mx-auto'>
         
           {/* <select onClick={onchange2} >
           <option value="All" >All</option>
@@ -107,15 +107,18 @@ const AllEq = () => {
           <option value="Personal" >Personal</option>
           <option value="Hehe" >Hehe</option>
         </select> */}
-        <select name="tag" id="tag"  onClick={onchange2} >
+        <label htmlFor='tag' className='tw-bg-purple-700 tw-py-3 tw-px-3 tw-rounded-3xl tw-text-slate-300 tw-font-semibold hover:tw-text-stone-100'>
+         <span className='tw-text-2xl'> Apply filter For Search </span>
+        <select name="tag" id="tag"  onClick={onchange2} className=' tw-text-stone-100 tw-mx-3 tw-bg-rose-400 tw-rounded-full tw-px-2 tw-py-2 tw-border-2 tw-border-violet-600 tw-border-dashed tw-transform tw-duration-500' >
           <option value="All">All</option>
           <option value="Jcb" onchange={onchange2} >Jcb</option>
 
           <option value="Tractor" onchange={onchange2}  >Tractor</option>
           <option value="Tiller" onchange={onchange2}  >Tiller</option>
         </select>
+        </label>
         
-<button ref={ref} type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button ref={ref} type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button>
 
@@ -140,7 +143,7 @@ const AllEq = () => {
   </div>
 </div>
 
-<div className='row my-3'>
+<div className='row my-3 tw-mx-5'>
 { 
      (notes2?.length==0)? <div>No Equipment</div>:
         notes2.map((note) => {

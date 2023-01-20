@@ -43,20 +43,20 @@ const Navbar = () => {
     <div className="collapse navbar-collapse tw-items-center tw-flex tw-justify-between" id="navbarSupportedContent">
       <ul className="navbar-nav tw-space-x-4 tw-space-y-2 mb-lg-0 tw-mx-4">
         <li className="nav-item navlogo">
-         {(sessionStorage.getItem('token'))&& <KONDI className={` ${(location.pathname === "/")?"tw-text-slate-300 tw-text-2xl":'tw-text-pink-700'}`} aria-current="page" to="/">Home</KONDI>}
+         {(sessionStorage.getItem('token'))&& <KONDI className={` ${(location.pathname === "/")?"tw-text-stone-100 tw-text-2xl":'tw-text-pink-300'}`} aria-current="page" to="/">Home</KONDI>}
 
         </li>
         <li className="nav-item navlogo">
-         {( sessionStorage.getItem('token2')) && <KONDI className={` ${(location.pathname === "/notes2")?"tw-text-slate-300 tw-text-2xl":'tw-text-pink-700'}`} aria-current="page" to="/notes2">YourHome</KONDI>}
+         {( sessionStorage.getItem('token2')) && <KONDI className={` ${(location.pathname === "/notes2")?"tw-text-stone-100 tw-text-2xl":'tw-text-pink-300'}`} aria-current="page" to="/notes2">YourHome</KONDI>}
         </li>
-        <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 ">
-          <KONDI className={`${(location.pathname === "/about")?"tw-text-slate-300 tw-text-2xl":'tw-text-pink-700'} `} to="/about">AboutUs</KONDI>
+        <li className="nav-item  hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 ">
+          <KONDI className={`${(location.pathname === "/about")?"tw-text-stone-100 tw-text-2xl":'tw-text-pink-300'} `} to="/about">AboutUs</KONDI>
         </li>
         <li className="nav-item navlogo">
-         {(sessionStorage.getItem('token2')) && <KONDI className={` ${(location.pathname === "/alln")?"tw-text-slate-300 tw-text-2xl":'tw-text-pink-700'}`} aria-current="page" to="/alln">All Equipment</KONDI>}
+         {(sessionStorage.getItem('token2')) && <KONDI className={` ${(location.pathname === "/alln")?"tw-text-stone-100 tw-text-2xl":'tw-text-pink-300'}`} aria-current="page" to="/alln">All Equipment</KONDI>}
         </li>
         <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 tw-my-2">
-         <KONDI className={` ${(location.pathname === "/news")?" tw-text-zinc-400 tw-text-2xl ":' tw-text-pink-600 '}`} aria-current="page" to="/news">News English</KONDI>
+         <KONDI className={` ${(location.pathname === "/news")?" tw-text-stone-100tw-text-2xl ":' tw-text-pink-300 '}`} aria-current="page" to="/news">News English</KONDI>
         </li>
 {/*        
         <li className="nav-item dropdown">
