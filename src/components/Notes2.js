@@ -26,7 +26,7 @@ const Notes = (props) => {
 
     }
     else{
-      navigate("/login2")
+      navigate("/login")
     }
 
 

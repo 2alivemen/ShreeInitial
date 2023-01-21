@@ -76,12 +76,12 @@ const Navbar = () => {
       </ul>
      
       {!(sessionStorage.getItem('token') || sessionStorage.getItem('token2') )? <div className=" tw-space-x-2 tw-space-y-2  tw-mx-4  tw-flex-row tw-text-right tw-items-center tw-flex tw-justify-between "><ul className='tw-flex tw-flex-row tw-space-x-4'>
-       <li> <KONDI className="" to="/login" role="button"><button className='logbutton'>Login</button></KONDI></li>
-       <li> <KONDI className="" to="/login2" role="button"><button className='logbutton'>Login2</button></KONDI></li>
+       <li> <KONDI className="" to="/login" role="button"><button className={` ${(location.pathname === "/login")?"logbuttonactive":'logbutton'}`}>Login</button></KONDI></li>
+       <li> <KONDI className="" to="/login2" role="button"><button className={` ${(location.pathname === "/login2")?"logbuttonactive":'logbutton'}`}>Login2</button></KONDI></li>
 
        <li> <KONDI className="" to="/signup" role="button"><button className='logbutton'>Signup</button></KONDI></li>
 
-       </ul></div>:<button className='logbutton' onClick={handleLogout}>Logout</button>}
+       </ul></div>:<button className="logbutton" onClick={handleLogout}>Logout</button>}
     </div>
   </div>
 </nav>
