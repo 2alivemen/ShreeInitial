@@ -139,7 +139,7 @@ const Noteitem = (props) => {
 &destination=court+sirsi
 &avoid=tolls|highways`} frameborder="0" width="500" height="500"></iframe></div>}
 
-<p className="card-text tw-mx-2 tw-my-2 tw-border-2 tw-border-purple-600 tw-border-dotted">{(note.order == "Hehe")?"No Orders":` Order Received To Destination ${note.order} from ${em23?.email} and mobile number ${em23?.number2}` }<button type='button' className='tw-mx-2 tw-bg-blue-600 berebuttonS' onClick={()=>{noorder(note)}}>reset</button><div></div> </p>
+<p className="card-text tw-mx-2 tw-my-2 tw-border-2 tw-border-purple-600 tw-border-dotted">{(note.order == "Hehe")?"No Orders":<div> Order Received To Destination <span className='tw-text-xl tw-text-amber-600'>{note.order} </span>  from <span className='tw-text-xl tw-text-amber-600'>{em23?.email}</span> and mobile number <span className='tw-text-xl tw-text-violet-600'> {em23?.number2} </span></div> }<button type='button' className='tw-mx-2 tw-bg-blue-600 berebuttonS' onClick={()=>{noorder(note)}}>reset</button><div></div> </p>
     {/* <a href="/usa" className="btn btn-primary mx-2"  >Jai Raaja</a> */}
     <div></div>
     </div>
