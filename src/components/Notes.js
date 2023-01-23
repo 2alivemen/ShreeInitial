@@ -197,12 +197,13 @@ const onChange = (e)=>{
         </select> */}
         <h2>Your Equipments</h2>
         <span> {notes.length===0 && "No Equipments To Display"} </span>
-        { 
+      { 
             notes.map((note) => {
             return <NoteItem key={note._id} note={note} updateNote={updateNote} showAlert={props.showAlert} noorder={noorder}/>
           })
           
           }
+      
            {/* updateNote={updateNote}  */}
 
          {/* ( notes  >= 0 )
