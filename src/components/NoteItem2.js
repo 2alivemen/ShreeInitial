@@ -33,7 +33,11 @@ const NoteItem2 = (props) => {
     <p className="card-text tw-mx-2 tw-border-2 tw-border-purple-600 tw-border-dotted">{note.description}</p>
    
     <p className='tw-mx-2 tw-my-3'>{(note.order=="Hehe")?<div className='tw-relative'>Available<div className='tw-bg-green-600 tw-h-3 tw-w-3 tw-rounded-full tw-absolute tw-top-1 tw-left-80'></div><div className='tw-bg-green-900 tw-h-3 tw-w-3 tw-rounded-full tw-absolute tw-top-1 tw-left-80 tw-animate-ping'></div></div>:<div className='tw-relative'>Not Available<div className='tw-bg-red-600 tw-h-3 tw-w-3 tw-rounded-full tw-absolute tw-top-1 tw-left-80'></div></div>}</p>
-    {(note.order !== "Hehe")?"":<button onClick={()=>{updateOrder(note)}} ><i className='fa fa-edit mx-2'></i></button>}
+    <p className='tw-text-xl tw-text-violet-600'>Location :{note.location}</p><br/>
+    <p className='tw-text-xl tw-text-purple-600'>Mobile Number :{note.number3}</p><br/>
+
+
+    {(note.order !== "Hehe")?"":<button onClick={()=>{updateOrder(note)}} >Price per hour <i className="fa-solid fa-indian-rupee-sign"></i> {note.hour}<i class="fa-solid fa-cart-shopping tw-text-2xl tw-text-green-600"></i></button>}
     {/* <i className="fa-solid fa-sack-dollar tw-h-4 tw-w-4"></i> */}
     {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
   </div>

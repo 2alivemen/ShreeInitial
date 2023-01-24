@@ -126,18 +126,18 @@ const AllEq = () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Enter location</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
-            <input type="text" name="order" pattern="[A-Za-z]+" minLength={3} title="Only Texts Are Allowed" onChange={onChange} required/>
-            <button type='button' onClick={handleClick}>Submit</button>
+            <input type="text" className='tw-bg-stone-300' name="order" pattern="[A-Za-z]+" minLength={3} title="Only Texts Are Allowed" onChange={onChange} required/>
+            <button type='button' className='berebuttonS tw-bg-blue-600' onClick={handleClick}>Submit</button>
          </form>
       </div>
       <div class="modal-footer">
-        <button ref={refClose} type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button ref={refClose} type="button" class="berebuttonS tw-bg-blue-600" data-bs-dismiss="modal">Close</button>
+        {/* <button type="button" class="btn btn-primary">Save changes</button> */}
       </div>
     </div>
   </div>

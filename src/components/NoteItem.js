@@ -135,8 +135,8 @@ const Noteitem = (props) => {
     {/* <button className="btn btn-primary mx-2" >Jai Raaja</button> */}
     {(note.order == "Hehe")?<span>No Orders</span>:<div className='tw-mx-auto'><iframe src={`https://www.google.com/maps/embed/v1/directions
 ?key=AIzaSyAHkI40OavSiT8UC01XHhgln5z7O5Thv7A
-&origin=${note.order}
-&destination=court+sirsi
+&origin=${note.location}
+&destination=${note.order}
 &avoid=tolls|highways`} frameborder="0" width="500" height="500"></iframe></div>}
 
 <p className="card-text tw-mx-2 tw-my-2 tw-border-2 tw-border-purple-600 tw-border-dotted">{(note.order == "Hehe")?"No Orders":<div> Order Received To Destination <span className='tw-text-xl tw-text-amber-600'>{note.order} </span>  from <span className='tw-text-xl tw-text-amber-600'>{em23?.email}</span> and mobile number <span className='tw-text-xl tw-text-violet-600'> {em23?.number2} </span></div> }<button type='button' className='tw-mx-2 tw-bg-blue-600 berebuttonS' onClick={()=>{noorder(note)}}>reset</button><div></div> </p>
