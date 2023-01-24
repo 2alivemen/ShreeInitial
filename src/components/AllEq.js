@@ -16,6 +16,8 @@ const AllEq = () => {
     const [inputt, setinputt] = useState({order: ""})
 
     const [order, setorder] = useState({id:"", order: ""})
+    const [email, setemail] = useState({email: "", number2: ""})
+
     
     // const [src, setsrc] = useState("")
     
@@ -28,6 +30,7 @@ const AllEq = () => {
     // }
     useEffect(() => {
         allnotes(tag2)  
+        em()
     
     
     
@@ -57,10 +60,12 @@ const AllEq = () => {
         // Illi mooru dot ... hesru spread operator andre note allira value + munde koda value
         setorder({...order, [e.target.name]: e.target.value})
     }
-      const updateOrder = (CurrentNote)=>{
+      const updateOrder = async (CurrentNote)=>{
         ref.current.click()
         
         setorder({id:CurrentNote._id, order: CurrentNote.order})
+       
+        sendemail(email.email,email.number2)
         // editorder(CurrentNote._id,order)
 
       }
@@ -96,6 +101,47 @@ const AllEq = () => {
       //  setNote2(json)
     
     
+    }
+   
+    const em = async()=>{
+    const response = await fetch("http://localhost:5001/api/auth/getuseremail240", {
+      method: 'POST',
+      headers: {
+        "auth-token":sessionStorage.getItem('token2'),
+        // "auth-token": localStorage.getItem('token'),
+        'Content-Type': 'application/json'
+      },
+      // body: JSON.stringify({title, description, tag})
+    })
+    const json = await response.json();
+    setemail({email:json.email,number2:json.number2})
+    console.log(json);
+    //Harry Bhai Method to fetch notes instantly
+      // const note =  {
+      //     "_id": "6391d8534098b1c133b9f65g",
+      //     "user": "6391d39bb6ea954cc189d75d",
+      //     "title": title,
+      //     "description": description,
+      //     "tag": tag,
+      //     "date": "1670502483505",
+      //     "__v": 0
+      //   };   
+      // setNote(notes.concat(note))
+   //my method to fetch notes instantly
+      // getnotes()
+  }
+
+    const sendemail = async( emailU, mobileU) => {
+      const response = await fetch("http://localhost:5001/api/sendmail", {
+        method: 'POST',
+        headers: {
+          // "auth-token":sessionStorage.getItem('token2'),
+          // "auth-token": sessionStorage.getItem('token'),
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ emailU, mobileU})
+      })
+
     }
 
   return (
