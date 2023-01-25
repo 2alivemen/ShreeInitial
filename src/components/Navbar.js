@@ -61,9 +61,9 @@ const Navbar = () => {
         <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 tw-my-2">
          <KONDI className={` ${(location.pathname === "/weather")?" tw-text-stone-100tw-text-2xl ":' tw-text-pink-300 '}`} aria-current="page" to="/weather">Weather</KONDI>
         </li>
-        <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 tw-my-2">
+        {/* <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 tw-my-2">
          <KONDI className={` ${(location.pathname === "/email")?" tw-text-stone-100tw-text-2xl ":' tw-text-pink-300 '}`} aria-current="page" to="/email">Email</KONDI>
-        </li>
+        </li> */}
 {/*        
         <li className="nav-item dropdown">
         <KONDI className="nav-link dropdown-toggle" to="/about" role="button" data-bs-toggle="dropdown" aria-expanded="false">

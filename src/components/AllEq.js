@@ -17,6 +17,7 @@ const AllEq = () => {
 
     const [order, setorder] = useState({id:"", order: ""})
     const [email, setemail] = useState({email: "", number2: ""})
+    const [su1, setsu1] = useState("")
 
     
     // const [src, setsrc] = useState("")
@@ -62,10 +63,11 @@ const AllEq = () => {
     }
       const updateOrder = async (CurrentNote)=>{
         ref.current.click()
+       let U1 = await sendU1(CurrentNote._id)
         
         setorder({id:CurrentNote._id, order: CurrentNote.order})
        
-        sendemail(email.email,email.number2)
+        sendemail(U1, email.email, email.number2)
         // editorder(CurrentNote._id,order)
 
       }
@@ -102,6 +104,23 @@ const AllEq = () => {
     
     
     }
+    const sendU1 = async(id)=>{
+      //API call
+      const response = await fetch("http://localhost:5001/api/notes/sendU1", {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({id})
+      })
+      const json = await response.json();
+      setsu1(json)
+      console.log("hoho manwith " + json)
+      return json
+
+
+  
+  }
    
     const em = async()=>{
     const response = await fetch("http://localhost:5001/api/auth/getuseremail240", {
@@ -131,7 +150,7 @@ const AllEq = () => {
       // getnotes()
   }
 
-    const sendemail = async( emailU, mobileU) => {
+    const sendemail = async( U1, emailU, mobileU) => {
       const response = await fetch("http://localhost:5001/api/sendmail", {
         method: 'POST',
         headers: {
@@ -139,7 +158,7 @@ const AllEq = () => {
           // "auth-token": sessionStorage.getItem('token'),
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ emailU, mobileU})
+        body: JSON.stringify({ U1, emailU, mobileU})
       })
 
     }
