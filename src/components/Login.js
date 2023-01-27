@@ -149,9 +149,11 @@ const Login = (props) => {
   </div>
 </form>
 <p></p>
-<div className="App">
-      <div id="signInDiv"></div>
-    </div>
+{/* <div className=""> */}
+    <div className=' tw-flex tw-justify-center'>
+      <div  className='tw-h-24' id="signInDiv"></div>
+      </div>
+    {/* </div> */}
     {/* <div style={mystyle}>powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style={{color:"#ccc"}}>Surfing Waves</a></div>  */}
     
 

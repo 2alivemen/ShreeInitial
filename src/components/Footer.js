@@ -5,7 +5,7 @@ import {
     useLocation
     } from "react-router-dom";
     import './stylefooter.css'
-    import pic from './Log.png'
+    import pic from './favicon.ico'
 
 const Footer = () => {
     

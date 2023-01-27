@@ -8,7 +8,7 @@ import {
     useNavigate
   } from "react-router-dom";
   import noteContext from "../context/noteContext";
-  import Log from "./Log.png";
+  import Log from "./favicon.ico";
 
 
 
@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <div>
         <nav className="navbar navbar-expand-lg navbar-dark tw-bg-purple-900 tw-h-16  tw-items-center tw-flex tw-justify-between">
-        <img src={Log} className='tw-h-14 tw-w-14 tw-lg:w-14  tw-rounded-3xl tw-py-2 tw-px-0'></img>
+        <img src={Log} className='tw-h-14 tw-w-14 tw-lg:w-14  tw-rounded-3xl tw-py-2 tw-px-0 dappablu'></img>
   <div className="container-fluid">
     <a className="navbar-brand tw-text-stone-100 tw-text-2xl tw-font-semibold tw-text-opacity-40 tw-hover:text-pink-600 tw-transform tw-duration-500" href=""><marquee scrollamount="4">AGROTECH</marquee></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
