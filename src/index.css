@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("JYU.jpg");
+  /* background-image: url("JYU.jpg"); */
+  background-color:  #7dce94;
   
 }
 
@@ -33,7 +34,7 @@ code {
   @apply tw-bg-slate-100 tw-border-2 tw-border-fuchsia-600 tw-border-y-purple-600 tw-text-center hover:tw-border-double tw-transform tw-duration-200 hover:tw-border-4;
 }
 .dappablu{
-  background-color: #f0d1e9;
+  background-color: #beef00;
 }
 @layer components{
 .berebutton{

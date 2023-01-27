@@ -33,7 +33,9 @@ const Footer = () => {
             </div>
             <div class="footer-col">
              <div class="img1">
-                     <img src={pic} alt='' />
+                     <img style={{
+                        backgroundColor : '#beef00'
+                     }} className='tw-h-40 tw-w-40 tw-rounded-full' src={pic} alt='' />
              </div>
          </div>
         </div>

@@ -172,7 +172,7 @@ const AllEq = () => {
           <option value="Personal" >Personal</option>
           <option value="Hehe" >Hehe</option>
         </select> */}
-        <label htmlFor='tag' className='tw-bg-purple-700 tw-py-3 tw-px-3 tw-rounded-3xl tw-text-slate-300 tw-font-semibold hover:tw-text-stone-100'>
+        <label htmlFor='tag'style={{backgroundColor :'#1400c6'}} className=' tw-py-3 tw-px-3 tw-rounded-3xl tw-text-slate-300 tw-font-semibold hover:tw-text-stone-100'>
          <span className='tw-text-2xl'> Apply filter For Search </span>
         <select name="tag" id="tag"  onClick={onchange2} className=' tw-text-stone-100 tw-mx-3 tw-bg-rose-400 tw-rounded-full tw-px-2 tw-py-2 tw-border-2 tw-border-violet-600 tw-border-dashed tw-transform tw-duration-500' >
           <option value="All">All</option>
