@@ -4,7 +4,7 @@ import  { useRef, useEffect,useState } from 'react'
 
 
 
-const Googlepay = () => {
+const Googlepay = (props) => {
     const ref = useRef(null)
     const [inp, setinp] = useState("")
     const onclik = ()=> {
@@ -16,10 +16,8 @@ const Googlepay = () => {
     
   return (
     <>
-    <form>
-    <input type='text' onChange={(e)=>{setinp(e.target.value)}}></input>
     <div className='tw-relative'>
-    { (inp.length>0) &&
+    
 <GooglePayButton
   environment="TEST" //PRODUCTION
   paymentRequest={{
@@ -53,7 +51,7 @@ const Googlepay = () => {
         transactionInfo:{
           totalPriceStatus:"FINAL",
           totalPriceLabel:"Total",
-          totalPrice:"100",
+          totalPrice:`${props.hour}`,
           currencyCode:"INR",
           countryCode:"IN"
         },
@@ -70,13 +68,12 @@ const Googlepay = () => {
     }}
     existingPaymentMethodRequired='false' 
     buttonColor='Black'
-    buttonType='buy' onClick={onclik} disabled={inp.toString().length<1}>
+    buttonType='buy' onClik={props.handleclick}>
      
     </GooglePayButton>
     
-}
+
     </div>
-    </form>
 
     </>
   )

@@ -118,14 +118,14 @@ const Login = (props) => {
      <div className='tw-w-1/2 tw-bg-slate-200 tw-flex tw-flex-col tw-justify-center tw-text-center tw-py-5 tw-rounded-3xl tw-my-5'>
       <form onSubmit={handleSubmit}>
           <div className="form-outline mb-4 ">
-    <input type="email" id="form2Example1" className="form-control tw-w-1/2 tw-mx-auto tw-my-3" name='email' value={credentials.email} onChange={onChange} readOnly/>
+    <input type="email" id="form2Example1" className="form-control tw-w-1/2 tw-mx-auto tw-my-3" name='email' value={credentials.email} onChange={onChange}/>
     <label className="form-label" htmlfor="form2Example1" >Email address</label>
   </div>
 
 
 
 
-  <button disabled={credentials.email.length<1} type="submit" className="btn tw-bg-blue-600 berebutton   tw-mx-auto" >Sign in</button>
+  <button disabled={credentials.email.length<1} type="submit" className="btn tw-bg-blue-600 berebutton   tw-mx-auto " >Sign in</button>
 
   <div className="text-center">
  
