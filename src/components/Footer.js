@@ -26,11 +26,21 @@ const Footer = () => {
             <div class="footer-col">
                 <h4>follow us</h4>
                 <div class="social-links">
-                    <a href="https://github.com/SHREESHA-HEGDE14"><i class="fab fa-github"></i></a>
-                    <a href="https://github.com/suprith2002/Agrotech.git"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/SHREESHA-HEGDE14" target='_blank'><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/suprith2002/Agrotech.git" target='_blank' ><i class="fab fa-github"></i></a>
+                    {/* <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href='https://wa.me/+918277549037'  target='_blank'><i className="fa-brands fa-whatsapp tw-text-4xl tw-text-green-600"></i></a>
+                    <a href='https://wa.me/+918277549037'  target='_blank'><i className="fa-brands fa-whatsapp tw-text-4xl tw-text-green-600 "></i></a>
+                    </div> */}
 
                 </div>
             </div>
+            <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href='https://wa.me/+918277549037'  target='_blank'><i className="fa-brands fa-whatsapp tw-text-4xl tw-text-green-600 hover:tw-text-stone-100"></i></a>
+                    <a href='https://wa.me/+917337800848'  target='_blank'><i className="fa-brands fa-whatsapp tw-text-4xl tw-text-green-600 tw-mx-4 hover:tw-text-stone-100"></i></a>
+                    </div>
             <div class="footer-col">
              <div class="img1">
                      <img style={{
