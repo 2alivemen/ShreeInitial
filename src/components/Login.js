@@ -1,5 +1,7 @@
 import React , {useState}from 'react'
 import { useNavigate } from 'react-router-dom'
+import  { useRef } from 'react'
+
 import { useContext, useEffect} from 'react'
 import noteContext from "../context/noteContext";
 import jwt_decode from "jwt-decode";
@@ -25,6 +27,12 @@ const Login = (props) => {
     const {test, settest, block, setblock } = context;
 
     const [credentials, setcredentials] = useState({email:"", password:""})
+    const ref = useRef(null);
+
+    const onchangehandle = () => {
+      ref.current.click()
+    }
+
 
   
 
@@ -114,15 +122,15 @@ const Login = (props) => {
 
 
 
-  <button disabled={credentials.email.length<1} type="submit" className="btn tw-bg-blue-600 berebutton  tw-mx-auto" >Sign in</button>
+  <button ref={ref} disabled={credentials.email.length<1} type="submit" className="btn tw-bg-blue-600 berebutton  tw-mx-auto" >Sign in</button>
 
   <div className="text-center">
  
   </div>
 </form>
 {/* <div className=""> */}
-    <div className=' tw-flex tw-justify-center tw-py-3'>
-      <div  className='tw-h-24' id="signInDiv"></div>
+    <div className=' tw-flex tw-justify-center tw-py-3' >
+      <div  className='tw-h-24' id="signInDiv" onChange={onchangehandle}></div>
       </div>
 
       <p>Not a member? <KONDI to="/signup"><span className='tw-text-green-600 tw-text-xl tw-font-bold hover:tw-text-pink-600 tw-transform tw-duration-500'>Signup</span></KONDI></p>
