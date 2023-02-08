@@ -113,13 +113,14 @@ const Login = (props) => {
 
   return (
     <div className='tw-flex tw-flex-col tw-items-center tw-justify-center'>
-       <div className='tw-text-3xl tw-text-emerald-800 tw-font-serif tw-font-extrabold'>Rent Taker Login</div>
+       <div className='tw-text-3xl tw-text-blue-700 tw-font-serif tw-font-extrabold'>Rent Taker Login</div>
      {/* <div className='w-25'><h1><marquee>WelCome User</marquee></h1></div> */}
      <div className='tw-w-1/2 tw-bg-slate-200 tw-flex tw-flex-col tw-justify-center tw-text-center tw-py-5 tw-rounded-3xl tw-my-5'>
       <form onSubmit={handleSubmit}>
           <div className="form-outline mb-4 ">
+          <label className="form-label tw-text-rose-700 tw-text-2xl" htmlfor="form2Example1" >Sign In With Google</label>
+
     <input type="email" id="form2Example1" className="form-control tw-w-1/2 tw-mx-auto tw-my-3" name='email' value={credentials.email} onChange={onChange}/>
-    <label className="form-label" htmlfor="form2Example1" >Email address</label>
   </div>
 
 

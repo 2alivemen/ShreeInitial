@@ -36,7 +36,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-dark tw-bg-purple-900 tw-h-16  tw-items-center tw-flex tw-justify-between">
         <img src={Log} className='tw-h-14 tw-w-14 tw-lg:w-14  tw-rounded-3xl tw-py-2 tw-px-0 dappablu'></img>
   <div className="container-fluid">
-    <a className="navbar-brand tw-text-stone-100 tw-text-2xl tw-font-semibold tw-text-opacity-40 tw-hover:text-pink-600 tw-transform tw-duration-500" href=""><marquee scrollamount="4">AGROTECH</marquee></a>
+    <a className="navbar-brand tw-text-stone-100 tw-text-2xl tw-font-semibold tw-text-opacity-80 tw-hover:text-pink-600 tw-transform tw-duration-500" href=""><marquee scrollamount="4">AGROTECH</marquee></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -61,9 +61,7 @@ const Navbar = () => {
         <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 tw-my-2">
          <KONDI className={` ${(location.pathname === "/weather")?" tw-text-stone-100tw-text-2xl ":' tw-text-pink-300 hover:tw-text-stone-300'}`} aria-current="page" to="/weather">Weather</KONDI>
         </li>
-        <li className="nav-item hover:tw-text-pink-600 hover:tw-text-2xl tw-font-semibold tw-cursor-pointer tw-transform tw-duration-500  tw-text-pink-600 tw-my-2">
-         <KONDI className={` ${(location.pathname === "/gpay")?" tw-text-stone-100tw-text-2xl ":' tw-text-pink-300 hover:tw-text-stone-300'}`} aria-current="page" to="/gpay">Gpay</KONDI>
-        </li>
+      
 
       </ul>
      

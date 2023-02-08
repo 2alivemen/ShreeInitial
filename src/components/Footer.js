@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
     </div>
   <div style={{'padding-top':'10px'}} class="footer-bottom">
-     <p>Copyright Reserved &copy; 2023 </p>
+     {/* <p>Copyright Reserved &copy; 2023 </p> */}
   </div>
   
 </footer></div>

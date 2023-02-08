@@ -68,7 +68,7 @@ const onChange = (e)=>{
 
     }
     else{
-      navigate("/login")
+      navigate("/fulllog")
     }
 
 

@@ -68,7 +68,7 @@ const Googlepay = (props) => {
     }}
     existingPaymentMethodRequired='false' 
     buttonColor='Black'
-    buttonType='buy' onClik={props.handleclick}>
+    buttonType='buy'>
      
     </GooglePayButton>
     

@@ -16,6 +16,7 @@ const AllEq = () => {
     const refClose = useRef(null);
     const [inputt, setinputt] = useState({order: ""})
     const [hour, sethour] = useState("")
+    const [noid, setnoid] = useState("")
 
     const [order, setorder] = useState({id:"", order: ""})
     const [email, setemail] = useState({email: "", number2: ""})
@@ -48,13 +49,14 @@ const AllEq = () => {
     
 
       }
-      const handleClick = (e)=>{
+      const handleClick = async(e)=>{
         console.log(order.id)
-        // e.preventDefault();
+        e.preventDefault();
         // setinputt(document.getElementsByName("order").value)
         // console.log(document.getElementsByName("order").value)
         addU2(order.id)
         editorder(order.id,order.order)
+
         // refClose.current.click()
 
 
@@ -69,8 +71,10 @@ const AllEq = () => {
         
         setorder({id:CurrentNote._id, order: CurrentNote.order})
         sethour(CurrentNote.hour)
-        
+        setnoid(CurrentNote._id)
         sendemail(U1, email.email, email.number2)
+
+        
         // editorder(CurrentNote._id,order)
 
       }
@@ -201,7 +205,7 @@ const AllEq = () => {
         <form>
             <input type="text" className='tw-bg-stone-300' name="order" pattern="[A-Za-z]+" minLength={3} title="Only Texts Are Allowed" onChange={onChange} required/>
             <button type='button' className='berebuttonS tw-bg-blue-600' onClick={handleClick}>Submit</button>
-            <Googlepay handleClick={handleClick} hour={hour}/>
+            <Googlepay clickk={handleClick} hour={hour}/>
          </form>
       </div>
       <div class="modal-footer">
